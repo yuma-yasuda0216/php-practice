@@ -2,14 +2,12 @@
 // Q1 変数と文字列
 $name = '安田';
 
-$newname ='私の名前は「' . $name . '」です。';
-echo  $newname;
+$NewName ='私の名前は「' . $name . '」です。';
+echo  $NewName;
 
 // Q2 四則演算
 $num  =  5* 4;
-echo  $num;
-
-echo  "\n";
+echo  $num,"\n";
 
 $num  /=  2;
 echo  $num;
@@ -21,14 +19,10 @@ echo '現在時刻は、' . date("Y年m月d日 H時i分s秒") . 'です。';
 
 // Q4 条件分岐-1 if文
 $device = '';//windows、mac、ipadなど入れてみて下さい！
-if ($device === 'windows') {
-    echo '使用のOSは、windowsです。';
-} else {
-  if ($device === 'mac') {
-    echo '使用のOSは、macです。';
+if ($device === 'windows' || $device === 'mac') {
+    echo '使用のOSは、' . $device . 'です。';
 } else {
     echo 'どちらでもありません。';
-       }
 }
 
 // Q5 条件分岐-2 三項演算子
@@ -39,7 +33,7 @@ echo $message;
 
 // Q6 配列
 $prefecture = ['埼玉県' , '茨城県' , '栃木県' , '千葉県' , '長野県' , '神奈川県' , '東京都'];
-echo ''. $prefecture[2] . 'と' . $prefecture[3] . 'は関東地方の都道府県です。'
+echo $prefecture[2] . 'と' . $prefecture[3] . 'は関東地方の都道府県です。'
 
 // Q7 連想配列-1
 $prefectures = [
@@ -121,11 +115,12 @@ echo calcTaxInPrice(1000);
 // Q12 関数とif文
 function distinguishNum($number)
 {
-    if ($number == 11) {
+    $OddNumber=$number+1;
+    if ($OddNumber %2 == 0) {
         echo $number . 'は奇数です。' . "\n";
     }else {
-        if($number == 24){
-        echo $number . 'は偶数です。';
+        if($number %2 == 0){
+        echo $number . 'は偶数です。'. "\n";
         }
     }
 }
@@ -139,19 +134,19 @@ function evaluateGrade($test)
     switch ($test) {
         case 'A':
         case 'B':
-            echo '合格です。';
+            return '合格です。';
             break;
-            
+
         case 'C':
-            echo '合格ですが追加課題があります。';
+            return '合格ですが追加課題があります。';
             break;
-            
+
         case 'D':
-            echo '不合格です。';
+            return '不合格です。';
             break;
-        
+
         default:
-            echo '判定不明です。講師に問い合わせてください。';
+            return '判定不明です。講師に問い合わせてください。';
             break;
     }
 }

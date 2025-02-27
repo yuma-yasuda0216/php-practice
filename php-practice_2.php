@@ -1,6 +1,5 @@
 <?php
 // Q1 tic-tac問題
-$number = [ 1,2,3,4,5];
 
 for($i=1; $i<=100; $i++){
     if($i %20===0) {
@@ -103,7 +102,7 @@ $yamada->attend('PHP');
 
 //問題1
 $days = new DateTime('now');
-$newday =$days ->modify('-1 month')->format('Y-m-d');
+$newday =$days->modify('-1 month')->format('Y-m-d');
 
 echo $newday;
 
