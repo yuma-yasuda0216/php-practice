@@ -46,13 +46,8 @@ $prefectures = [
   '茨城県' => '水戸市'
 ];
 
-echo $prefectures['東京都'],"\n";
-echo $prefectures['神奈川県'],"\n";
-echo $prefectures['千葉県'],"\n";
-echo $prefectures['埼玉県'],"\n";
-echo $prefectures['栃木県'],"\n";
-echo $prefectures['群馬県'],"\n";
-echo $prefectures['茨城県']
+foreach($prefectures as $NewPrefectures => $valus)
+echo $prefectures[$NewPrefectures],"\n";
 
 // Q8 連想配列-2
 $prefectures = [
@@ -97,11 +92,11 @@ foreach ($prefectures as $key => $value) {
 // Q10 関数-1
 function hello($name)
 {
-    echo $name . 'さん、こんにちは。' ."\n";
+    return $name . 'さん、こんにちは。' ."\n";
 }
 
-hello('金谷');
-hello('安藤');
+echo hello('金谷');
+echo hello('安藤');
 
 // Q11 関数-2
 function calcTaxInPrice($price)
@@ -135,19 +130,15 @@ function evaluateGrade($test)
         case 'A':
         case 'B':
             return '合格です。';
-            break;
 
         case 'C':
             return '合格ですが追加課題があります。';
-            break;
-
+            
         case 'D':
             return '不合格です。';
-            break;
 
         default:
             return '判定不明です。講師に問い合わせてください。';
-            break;
     }
 }
 

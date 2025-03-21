@@ -40,11 +40,11 @@ $personalInfos = [
 echo $personalInfos[1]['name'] . 'の電話番号は' . $personalInfos[1]['tel']. 'です。';
 
 //問題2
-foreach ($personalInfos as $x => $y){
-  //echo $y['name'] ;
-  $number = $x + 1;
-  echo $number . '番目の' . $personalInfos[$x]['name'] . 'のメールアドレスは' . $personalInfos[$x]['mail'] . 'で電話番号は' . $personalInfos[$x]['tel'] . 'です。' ;
-  echo "\n";
+foreach ($personalInfos as $x => $information){
+    //echo $y['name'] ;
+    $number = $x + 1;
+    echo $number . '番目の' .$information['name'] . 'のメールアドレスは' .$information['mail'] . 'で電話番号は' .$information['tel'] . 'です。' ;
+    echo "\n";
 }
 
 //問題3
